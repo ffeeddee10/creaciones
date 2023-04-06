@@ -3,28 +3,28 @@ import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // importo mis componentes
-import Header from "./components/header/header";
-import Nav from "./components/nav/nav";
+//import Header from "./components/Header/Header";
+import Navegar from "./components/Navegar/Navegar";
+//import footer from "./components/footer/footer";
 
 // importo las paginas creadas
-import index from "./pages/index/index";
-import tortas from "./pages/tortas/tortas";
-import box from "./pages/box/box";
-import galletitas from "./pages/galletitas/galletitas";
-import contacto from "./pages/contacto/contacto";
+import Inicio from "./pages/Inicio/Inicio";
+import Tortas from "./pages/Tortas/Tortas";
+import Box from "./pages/Box/Box";
+import Galletitas from "./pages/Galletitas/Galletitas";
+import Contacto from "./pages/Contacto/Contacto";
 
 const App = () => {
   return (
     <Router>
       <div className="App">
-        <Header />
-        <Nav />
+        <Navegar />
         <Routes>
-          <Route path="/" element={<index />} />
-          <Route path="/tortas" element={<tortas />} />
-          <Route path="/box" element={<box />} />
-          <Route path="/galletitas" element={<galletitas />} />
-          <Route path="/contacto" element={<contacto />} />
+          <Route path="/" element={<Inicio />} />
+          <Route path="/tortas" element={<Tortas />} />
+          <Route path="/box" element={<Box />} />
+          <Route path="/galletitas" element={<Galletitas />} />
+          <Route path="/contacto" element={<Contacto />} />
         </Routes>
       </div>
     </Router>

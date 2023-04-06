@@ -1,12 +1,12 @@
 import React from "react";
 
-const Box = () => {
+const Inicio = () => {
     return (
         <div>
-            <h1>Box</h1>
+            <h1>Inicio</h1>
             <p>https://jsonplaceholder.typicode.com/users</p>
         </div>
     );
 };
 
-export default Box;
+export default Inicio;
