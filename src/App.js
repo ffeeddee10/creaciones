@@ -3,9 +3,11 @@ import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // importo mis componentes
-//import Header from "./components/Header/Header";
+import Header from "./components/cabeza/Header";
 import Navegar from "./components/Navegar/Navegar";
-//import footer from "./components/footer/footer";
+import CardList from "./components/cardLista/cardList";
+
+
 
 // importo las paginas creadas
 import Inicio from "./pages/Inicio/Inicio";
@@ -18,7 +20,9 @@ const App = () => {
   return (
     <Router>
       <div className="App">
+        <Header />
         <Navegar />
+        <CardList />
         <Routes>
           <Route path="/" element={<Inicio />} />
           <Route path="/tortas" element={<Tortas />} />
