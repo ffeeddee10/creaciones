@@ -9,7 +9,7 @@ const CardList = () => {
     const [users, setUsers] = useState([]);
 
     useEffect(() => {
-        axios("https://dragon-ballz-super-api.site/Docs").then((res) =>
+        axios("https://jsonplaceholder.typicode.com/users").then((res) =>
             setUsers(res.data)
         );
     }, []);
