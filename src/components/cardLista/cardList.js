@@ -6,17 +6,17 @@ import { Link } from "react-router-dom";
 import Cards from "../card/card";
 
 const CardList = () => {
-    const [users, setUsers] = useState([]);
+    const [character, setUsers] = useState([]);
 
     useEffect(() => {
-        axios("https://jsonplaceholder.typicode.com/users").then((res) =>
+        axios("https://rickandmortyapi.com/api/character").then((res) =>
             setUsers(res.data)
         );
     }, []);
 
     return (
         <div className="Cards-List">
-            {users.map((user) => {
+            {character.map((user) => {
                 return (
                     <div key={user.id}>
                         <Link to={`/user-detail/${user.id}`}>
