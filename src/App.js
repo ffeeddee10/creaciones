@@ -1,38 +1,16 @@
 import "./App.css";
-// importo el dom de react
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Footer from "./components/Footer/Footer";
+import Navmain from "./components/NavBar/NavMain";
+import HomeMaiN from "./components/HomePage/HomeMain";
 
-// importo mis componentes
-import Header from "./components/cabeza/Header";
-import Navegar from "./components/Navegar/Navegar";
-import CardList from "./components/cardLista/cardList";
-
-
-
-// importo las paginas creadas
-import Inicio from "./pages/Inicio/Inicio";
-import Tortas from "./pages/Tortas/Tortas";
-import Box from "./pages/Box/Box";
-import Galletitas from "./pages/Galletitas/Galletitas";
-import Contacto from "./pages/Contacto/Contacto";
-
-const App = () => {
+function App() {
   return (
-    <Router>
-      <div className="App">
-        <Header />
-        <Navegar />
-        <CardList />
-        <Routes>
-          <Route path="/" element={<Inicio />} />
-          <Route path="/tortas" element={<Tortas />} />
-          <Route path="/box" element={<Box />} />
-          <Route path="/galletitas" element={<Galletitas />} />
-          <Route path="/contacto" element={<Contacto />} />
-        </Routes>
-      </div>
-    </Router>
+    <>
+      <Navmain />
+      <HomeMaiN />
+      <Footer />
+    </>
   );
-};
+}
 
 export default App;
